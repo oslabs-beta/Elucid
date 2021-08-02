@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require("path");
 const schema = require("./schema/schema")
+const resolvers = require("./schema/resolvers")
+var { graphqlHTTP } = require('express-graphql')
+// const Elucid = require("Elucid")
 
 const PORT = 3000
 
@@ -10,9 +13,18 @@ app.use(express.json())
 
 
 
-app.use('/graphql', (req, res) => {
-   return res.status(200).send('HELLO WORLD')
-});
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: resolvers,
+  graphiql: true,
+  pretty: true,
+  customFormatErrorFn: () => {
+    console.log("Hello World")
+  }
+}), 
+);
+
+
 
 app.use('/', (req, res) => {
     return res
