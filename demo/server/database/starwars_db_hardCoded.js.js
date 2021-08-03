@@ -32,7 +32,7 @@ module.exports = {
             hair_color: "red",
             skin_color: "brown",
             birth_year: "07.31.2021",
-            gender: "female",
+            gender: "male",
             species_id: 31,
             homeworld_id: 32,
             height: 155,
