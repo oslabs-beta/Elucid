@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json())
 
 
-const elucidate = (result, context) =>  {
+const elucidate = (info, context) =>  {
   // ('Result' carries the GQL query result data, and 'context' carries res.)
 
   // **CATEGORY 1: THE QUERY FAILS GRAPHQL INTERNAL VALIDATION (SYNTAX, SCHEMA LOGIC, ETC.)**
@@ -32,25 +32,47 @@ const elucidate = (result, context) =>  {
 
   /* Resolver is malformed (given field argument is not supplied inside an object)*/
 
-  // Return the updated status code out:
-  context.res.status(850);
-  return context.res.statusCode;
+console.log(context.req.body.query)
+console.log()
+let result = [];
+function nested(data) {
+ 
+ for (let keys in data){
+        // if key is null then we return an error
+        if (data[keys] === null){
+        //  context.res.status(250);
+         // console.log(keys)
+         result.push(` ${keys}`)
+       } 
+   // account for nested objects within keys
+   // if key is not null and is object, check if there are any null values in the nested object
+   else if (data[keys] !== null && typeof data[keys] === 'object') {
+      nested(data[keys]);
+    }
+ }
+//  console.log ('result', result);
+ return result;
 }
+ let temp = nested(info)
+ return {message: 'data not found in field: ' + temp , statusCode: context.res.statusCode,};
+}
+
+
 
 // Extensions variable is necessary for the 'extensions' property of graphqlHTTP 
 // to work correctly. The callback contains the invocation of our 'elucidate' error-
 // handler function.
 const extensions = ({
-  /*document,
+  document,
   variables,
-  operationName,*/
+  operationName,
   result,
   context,
 }) => {
   return {
     // 'elucidate' function parses 200 OK responses to decide if additional
     // error handling is necessary
-    elucid: elucidate(result, context)
+    'elucid': elucidate(result.data, context, document,),
     };
 };
 
@@ -62,7 +84,7 @@ app.use('/graphql', (req, res) => {
     rootValue: resolvers,
     graphiql: true,
     pretty: true,
-    context: { res },
+    context: { req, res },
     customFormatErrorFn: (err) => {
       // Here we define any *additional* error-handling behavior for
       // errors that Express-graphQL DOES catch by itself:
