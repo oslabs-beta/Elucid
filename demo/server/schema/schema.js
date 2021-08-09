@@ -22,8 +22,6 @@ type Person {
     homeworld: Homeworld!
   }
 
-
-
   type Query {
     people: [Person!]
     person(id: Int): Person
