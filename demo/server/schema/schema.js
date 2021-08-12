@@ -29,4 +29,3 @@ type Person {
 `);
 
 module.exports = schema;
-
