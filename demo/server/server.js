@@ -122,7 +122,7 @@ const elucidate = (result, context, schema) => {
       if (nullFields.length > 0) message += `Data not found in field(s): ${nullFields}.`;
       return {
         message: message + message2
-      }
+      };
     }
   }
 
