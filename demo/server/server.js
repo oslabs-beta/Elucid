@@ -18,101 +18,78 @@ const elucidate = (result, context, schema) => {
 
   //DO LATER: need to iterate thru all selections to get all arguments for each subquery of query
   ////const queryArgs = parse(query).definitions[0].selectionSet.selections;
-
-  if (result.errors && !result.errors[0].message.includes('non-nullable field')) {
-    context.res.statusCode = 500;
-    return {
-      message: `Server error: please check your resolvers`,
-      statusCode: context.res.statusCode,
-    };
+  function handleResultWithoutNonNullableError(errorArr) {
+    if (errorArr && !errorArr[0].message.includes('non-nullable field')) {
+      context.res.statusCode = 500;
+      return {
+        message: `Server error: please check your resolvers`,
+        statusCode: context.res.statusCode,
+      };
+    }
+    return null;
   }
+
+  const errorMsgExists = handleResultWithoutNonNullableError(result.errors);
+  if (errorMsgExists) return errorMsgExists;
 
   function elucidateHelper(data, context, schema) {
 
     const responseFieldsWithNull = [];
+    const queryFieldsWithArgs = {};
 
-    //helper function to get all keys with null values
-    function getResponseFieldsWithNull(input) {
+    //helper function to get all response keys with null values
+    function getResponseFieldsWithNull(input, property) {
       for (const key in input) {
         // if key is null then we return an error
         if (input[key] === null) {
-          responseFieldsWithNull.push(`${key}`);
+          if (property) responseFieldsWithNull.push(`"${property}.${key}"`);
+          else responseFieldsWithNull.push(`${key}`);
         }
         // account for nested objects within keys
-        // if key is not null and is object, check if there are any null values in the nested object
         else if (input[key] !== null && typeof input[key] === 'object') {
-          getResponseFieldsWithNull(input[key]);
+          getResponseFieldsWithNull(input[key], key);
         }
       }
     }
 
     getResponseFieldsWithNull(data);
 
-    //account for errors in resolver or null data when sending correct query with nonexistent argument value - not yet completed
-    ////return 'Data queried for ${person with id: 1} cannot be found...' msg when query has an arg AND returns null at the top-level field (not individual field with null) - we also want to acct for definitions or selections (don't know which one) at index 1, 2 etc.
-    ////i.e. person (id: 2) gender with value of null should not return below msg, currently is not because we hardcoded index for nullTop and nullFields[0]
-    const queryFieldsWithArgs = {};
-
+    //if there are null fields, dig further to provide a more helpful reason why
     if (responseFieldsWithNull.length > 0) {
       const { query } = context.req.body;
 
-      //arr of objs that each are the query fields. with aliases: obj.alias.value
-      // const nullTop = parse(query).definitions[0].selectionSet.selections;
+      //query: arr of objs; ea obj pertains to ea query field in query string. 
+      //aliases: obj.alias.value (alias name)
+      //no aliases: obj.name.value (query field name)
 
-      //no aliases: iterate thru arr of obj, and access the obj.name.value to get query field name
-      // const nullTop = parse(query).definitions[0].selectionSet.selections;
-
-      //cks if there are any arguments for the query field - arguments is an arr of objects, with ea argument field name a separate obj
-
-      //getQueryFieldsWithArgs is going to store an arr of field names with arguments in the query string
-      ////DO NEXT!!! compare elements of queryFieldWithArgs with nullFields - if element is in nullFields, then return 'Data queried for cannot be found...'
-
+      //getQueryFieldsWithArgs populates queryFieldsWithArgs object
+      ////queryFieldsWithArgs obj: alias/name (key), 'argumentName: argumentValue' (value)
+      //does not currently support multiple arguments
+      //arguments is an array of objects, ea argument field name is a separate obj
+      //ea element in arguments has name.value(arg field name) and value.value(arg's value)
       function getQueryFieldsWithArgs(parsed) {
-        //iterate thru parsedQuery length
-        ////ck if arguments.length is greater than 0, if yes, push to queryFieldsWithArgs
-
-        //arguments is an array. name.value (arg field name) and value.value (arg's value)
         for (const obj of parsed) {
           if (obj.arguments.length > 0) {
             if (obj.alias) queryFieldsWithArgs[obj.alias.value] = `${obj.arguments[0].name.value}: ${obj.arguments[0].value.value}`;
             else queryFieldsWithArgs[obj.name.value] = `${obj.arguments[0].name.value}: ${obj.arguments[0].value.value}`;
-            // console.log(obj.arguments)
-            //queryFieldsWithArgs.push(obj.name.value);
           }
         }
+        return;
       }
 
       const parsedQuery = parse(query).definitions[0].selectionSet.selections;
       getQueryFieldsWithArgs(parsedQuery);
-      // console.log(fieldsWithArgs);
-      // console.log(nullFields);
-
-      // console.log(nullTop);
-
-      // const nullTop = parse(query).definitions[0].selectionSet.selections[0].name.value;
-      // const queryArgs =
-      //   parse(query).definitions[0].selectionSet.selections[0].arguments[0].name.value;
-
-      // //if queryArgs exists, return msg to user: data queried for cannot be found, and may not exist in DB
-      // if (queryArgs && nullFields[0] === nullTop) {
-      //   return {
-      //     message: `Data queried for cannot be found & may not exist in database. If you believe this to be an error, please contact your server administrator.`,
-      //   };
-      // }
     }
 
-    //introspectionFromSchema returns an object
-    //.__schema.types will return array of obj. To get type of 'Query', iterate thru obj elements for 'name' of 'Query'
-    //this obj will have fields - iterate thru fields array of obj to ck for args with length greater than 0
-    //if length greater than 0, access value of arg key
-    //arg key is an arr of obj (ea available arg is an obj)
-    //iterate thru arg arr to ck for type.kind of "NON_NULL"
-    //if it is not, get fields.name and fields.args.name
-    // console.log(introspectionFromSchema(schema).__schema.types[4].fields[1].args[0].name)
-    // console.log(introspectionFromSchema(schema).__schema.types[4].fields[1].args[0].type.kind)
-    // console.log(parse(printSchema(schema)).definitions[2].fields[1].arguments[0]);
-
+    //getSchemaFieldsWithNullableArgs returns an object of query types with nullable arguments defined in schema
+    //output obj: queryName (key), argumentNames (value: array of strings)
     function getSchemaFieldsWithNullableArgs(schema) {
+    // introspectionFromSchema returns an object with information about schema
+    // .__schema.types is an array of objects
+    // To get type 'Query', find 'name' of 'Query'
+    //type Query obj has fields, an array of objects
+    //field obj contains key of args, an array of objects
+    //arg obj contains key-value of type.kind: "NON_NULL" if schema has marked argument as non-nullable
       const typesFromSchema = introspectionFromSchema(schema).__schema.types;
 
       const schemaFields = (function(types){
@@ -139,40 +116,66 @@ const elucidate = (result, context, schema) => {
       return schemaFields;
     }
     
-    //obj values are arrays
+    //schemaFieldsWithNullableArgs is an object with array values
     const schemaFieldsWithNullableArgs = getSchemaFieldsWithNullableArgs(schema);
-    // console.log(schemaFieldsWithNullableArgs);
 
-    let message = '';
-    //send different msg if there are no null fields
-    if (responseFieldsWithNull.length === 0)
-      return { message: 'Elucid validated your response. No errors found.' };
-    else {
-      //fieldsWithArgs
-      //nullFields
-      //iterate thru fields with args, and then nullFields array, and check if it includes any elements in fieldswithargs
-      let message2 = '';
-      for (const field of Object.keys(queryFieldsWithArgs)) {
-        if (responseFieldsWithNull.includes(field)) {
-          message2 += ` Data queried for ${field} with arg: ${queryFieldsWithArgs[field]} cannot be found & may not exist; if this is an error, contact your server admin.`;
+    function buildElucidMessage() {
 
-          responseFieldsWithNull.splice(responseFieldsWithNull.indexOf(field), 1);
+      //if there are no null fields, return message object to confirm validation
+      //if there are null fields, group them by checking if field is in queryFieldsWithArg or schemaFieldsWithNullable Args
+      //and return all applicable messages
+      if (responseFieldsWithNull.length === 0)
+        return {
+          message: 'Elucid validated your response. No errors found.',
+        };
+      else {
+        function buildQueryFieldsWithArgsMsg() {
+          let queryFieldsWithArgsMsg = '';
+
+          for (const field of Object.keys(queryFieldsWithArgs)) {
+            if (responseFieldsWithNull.includes(field)) {
+              queryFieldsWithArgsMsg += `Data queried for ${field} with arg: ${queryFieldsWithArgs[field]} cannot be found & may not exist; if this is an error, contact your server admin.`;
+
+              responseFieldsWithNull.splice(responseFieldsWithNull.indexOf(field), 1);
+            }
+          }
+          return queryFieldsWithArgsMsg;
         }
-      }
+        const queryFieldsWithArgsMessage = buildQueryFieldsWithArgsMsg();
+        
+        function buildSchemaFieldsWithNullableArgsMsg() {
+          let schemaFieldsWithNullableArgsMsg = '';
 
-      let message3 = '';
-      for (const field of Object.keys(schemaFieldsWithNullableArgs)) {
-        if (responseFieldsWithNull.includes(field)) {
-          message3 += ` Data queried for ${field} did not have arg(s): ${schemaFieldsWithNullableArgs[field]}; verify if arg(s) should be NON-NULLABLE in schema.`;
+          for (const field of Object.keys(schemaFieldsWithNullableArgs)) {
+            if (responseFieldsWithNull.includes(field)) {
+              schemaFieldsWithNullableArgsMsg += `Data queried for ${field} did not have arg(s): ${schemaFieldsWithNullableArgs[field]}; verify if arg(s) should be NON-NULLABLE in schema.`;
 
-          responseFieldsWithNull.splice(responseNullFields.indexOf(field), 1);
+              responseFieldsWithNull.splice(responseFieldsWithNull.indexOf(field), 1);
+            }
+          }
+
+          return schemaFieldsWithNullableArgsMsg;
         }
+
+        const schemaFieldsWithNullableArgsMessage = buildSchemaFieldsWithNullableArgsMsg();
+
+        function buildDataNotFoundMsg() {
+          let dataNotFoundMsg = '';
+          if (responseFieldsWithNull.length > 0) {
+            dataNotFoundMsg += `Data not found in field(s): ${responseFieldsWithNull}.`;
+          }
+          return dataNotFoundMsg;
+        }
+
+        const dataNotFoundMessage = buildDataNotFoundMsg();
+
+        return {
+          message: `${dataNotFoundMessage}${dataNotFoundMessage ? ' ' + queryFieldsWithArgsMessage : queryFieldsWithArgsMessage}${dataNotFoundMessage || queryFieldsWithArgsMessage ? ' ' + schemaFieldsWithNullableArgsMessage : schemaFieldsWithNullableArgsMessage}`
+        };
       }
-      if (responseFieldsWithNull.length > 0) message += `Data not found in field(s): ${responseFieldsWithNull}.`;
-      return {
-        message: message + message2 + message3
-      };
     }
+
+    return buildElucidMessage();
   }
 
   const elucidateHelperResult = elucidateHelper(result.data, context, schema);
@@ -193,7 +196,7 @@ const extensions = ({ result, context }) => {
   };
 };
 
-// Handle requests to GraphQL endpoint:
+// Handle requests to GraphQL endpoint
 app.use('/graphql', (req, res) => {
   graphqlHTTP({
     schema,
