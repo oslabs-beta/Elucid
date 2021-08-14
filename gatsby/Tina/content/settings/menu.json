@@ -5,10 +5,6 @@
       "link": "/"
     },
     {
-      "label": "About",
-      "link": "/about"
-    },
-    {
       "label": "Demo",
       "link": "/demo"
     },
@@ -17,7 +13,11 @@
       "link": "/contact"
     },
     {
-      "label": "Pac"
+      "label": "About",
+      "link": "/about"
+    },
+    {
+      "label": "Product"
     }
   ]
 }
