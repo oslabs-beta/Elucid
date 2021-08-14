@@ -13,7 +13,7 @@ module.exports = {
         },
         {
             id: 2,
-            name: "Darth Vader",
+            // name: "Darth Vader",
 			height: "202",
 			mass: "136",
 			hair_color: "none",
