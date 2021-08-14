@@ -1,0 +1,45 @@
+{
+  "name": "gatsby-starter-landed-v2",
+  "description": "Gatsby Starter - Landed V2",
+  "version": "1.0.0",
+  "author": "Vasilis Gakis",
+  "dependencies": {
+    "gatsby": "^2.18.1",
+    "gatsby-image": "^2.2.33",
+    "gatsby-plugin-html-attributes": "^1.0.5",
+    "gatsby-plugin-manifest": "^2.2.29",
+    "gatsby-plugin-offline": "^3.0.22",
+    "gatsby-plugin-react-helmet": "^3.1.15",
+    "gatsby-plugin-sass": "^2.1.23",
+    "gatsby-plugin-sharp": "^2.3.2",
+    "gatsby-source-filesystem": "^2.1.38",
+    "gatsby-transformer-sharp": "^2.3.5",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-reveal": "^1.2.2",
+    "react-scroll": "^1.7.14"
+  },
+  "resolutions": {
+    "react-helmet/react-side-effect": "2.1.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write '**/*.js'",
+    "clean": "gatsby clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasrush/gatsby-starter-landed"
+  }
+}
