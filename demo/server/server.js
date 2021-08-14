@@ -12,7 +12,10 @@ const app = express();
 
 app.use(express.json());
 
-console.log(schema);
+
+console.log(schema)
+
+
 
 const elucidate = (result, context, schema) => {
   // ('Result' carries the GQL query result.data and result.errors, and 'context' carries http response (context.res.statusCode / ))
