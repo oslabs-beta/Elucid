@@ -29,6 +29,6 @@ const Banner = props => (
       Next
     </ScrollLink>
   </section>
-)
+);
 
 export default Banner
