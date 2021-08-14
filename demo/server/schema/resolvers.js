@@ -2,18 +2,12 @@
 const db = require('../database/starwars_db_hardCoded.js');
 
 const resolvers = {
-  // Query: {
   people: () => {
     return db.People;
   },
-  person: ({ id }) => {
+  person: ({ id }  ) => {
     return db.People.find((person) => person.id == id);
   },
-  // },
-
-  // Mutation: {
-
-  // }
 };
 
 module.exports = resolvers;
