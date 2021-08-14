@@ -2,7 +2,12 @@
   "menuItems": [
     {
       "label": "Info",
-      "link": "/"
+      "link": "/",
+      "subMenu": [
+        {
+          "label": "hi"
+        }
+      ]
     },
     {
       "label": "About",
