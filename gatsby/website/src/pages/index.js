@@ -14,9 +14,9 @@ class Home extends React.Component {
       <Layout location="/">
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          title="Gatsby Starter - Landed"
+          title="Elucid - Landed"
           meta={[
-            { name: 'description', content: 'Landed Gatsby Starter' },
+            { name: 'description', content: 'Landed Elucid Starter' },
             { name: 'keywords', content: 'sample, something' },
           ]}
         ></Helmet>
@@ -24,7 +24,7 @@ class Home extends React.Component {
         <One />
         <Two />
         <Three />
-        <Four />
+        {/* <Four /> */}
         <Five />
       </Layout>
     )

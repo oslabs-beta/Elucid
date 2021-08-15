@@ -3,12 +3,12 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Graphiql from '../components/Graphiql'
 
-import pic07 from '../assets/images/pic07.jpg'
+import pic07 from '../assets/images/pic077.gif'
 
 const Demo = props => (
   <Layout>
     <Helmet>
-      <title>Demo - Landed by HTML5 UP</title>
+      <title>Demo - Elucidate</title>
       <meta name="description" content="Demo Page" />
     </Helmet>
 
@@ -22,11 +22,20 @@ const Demo = props => (
         </header>
 
         <section id="content">
-          <a href="#" className="image fit">
+          <div href="#" className="image fit">
+            <h1>demo gifs and pics here</h1>
+            <p>something here</p>
             <img src={pic07} alt="" />
-            
-          </a>
+          </div>
+          <div href="#" className="image fit">
+          <p>something here</p>
+            <img src={pic07} alt="" />
+          </div>
+          <header className="major">
+          <h2>DEMO TIME</h2>
+        </header>
           <Graphiql/>
+          <br/>
           <h3>No Sidebar</h3>
           <p>
             Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est.

@@ -31,7 +31,7 @@ module.exports = {
             items: [
               {
                 name: 'Medium',
-                link: '#',
+                link: 'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
               },
               {
                 name: 'article 2',
@@ -71,7 +71,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/Elucid_Logo.jpg', // This path is relative to the root of the site.
       },
     },
     {

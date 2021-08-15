@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import TeamMember from '../components/TeamMember'
-import pic07 from '../assets/images/pic07.jpg'
+import pic07 from '../assets/images/pic07.gif'
 import Khayal from '../assets/images/team_photos/Khayal.jpg'
 import Vivian from '../assets/images/team_photos/Vivian.jpg'
 import Spencer from '../assets/images/team_photos/Spencer.jpg'
@@ -49,7 +49,7 @@ const gary = {
 const Team = props => (
   <Layout>
     <Helmet>
-      <title>Team - Landed by HTML5 UP</title>
+      <title>Team Elucid</title>
       <meta name="description" content="Team Page" />
     </Helmet>
 
