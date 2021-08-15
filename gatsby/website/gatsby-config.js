@@ -1,13 +1,14 @@
 module.exports = {
   //pathPrefix: `/mygatsby`,
   siteMetadata: {
-    title: 'ELUCID HOME',
+    title: 'HOME',
     author: 'ELUCID TEAM',
     description: 'A Gatsby.js V2 Starter based on Landed by HTML5 UP',
     menuLinks: [
       {
         name: 'Demo',
         link: '/demo',
+        // link: '/right-sidebar',
       },
       {
         name: 'Links',
@@ -17,14 +18,15 @@ module.exports = {
             name: 'GitHub',
             link: 'https://github.com/oslabs-beta/Elucid',
           },
+          
           {
-            name: 'Something Here',
+            name: 'Optional',
             link: '/right-sidebar',
           },
-          {
-            name: 'Left Sidebar',
-            link: '/left-sidebar',
-          },
+          // {
+          //   name: 'Optional',
+          //   link: '/left-sidebar',
+          // },
           {
             name: 'Articles',
             link: '#',
