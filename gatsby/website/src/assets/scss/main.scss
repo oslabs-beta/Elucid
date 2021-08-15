@@ -804,6 +804,45 @@
 		height: 800px;
 	  }
 
+	  #team-quell {
+		display: block;
+		margin: auto;
+		left: 50%;
+		right: 50%;
+		width: 60%;
+		padding: 2%;
+		margin-bottom: 10%;
+	  }
+	  
+	  #team {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 18px;
+	  }
+	  
+	  .profile-pics {
+		width: 45%;
+		max-width: 400px;
+		margin-bottom: 4%;
+	  }
+	  
+	  .profile-pics img {
+		margin-bottom: 4%;
+	  }
+	  
+	  .team-member-name {
+		font-weight: bold;
+		margin-bottom: 10px;
+		letter-spacing: 5.2px;
+	  }
+	  
+	  .social-icons img {
+		width: 15%;
+		margin-top: 10px;
+		margin-left: 10px;
+	  }
+
 /* List */
 
 	ol {

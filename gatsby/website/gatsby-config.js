@@ -21,10 +21,10 @@ module.exports = {
             name: 'Something Here',
             link: '/right-sidebar',
           },
-          // {
-          //   name: 'Left Sidebar',
-          //   link: '/left-sidebar',
-          // },
+          {
+            name: 'Left Sidebar',
+            link: '/left-sidebar',
+          },
           {
             name: 'Articles',
             link: '#',
