@@ -1,48 +1,48 @@
 module.exports = {
   //pathPrefix: `/mygatsby`,
   siteMetadata: {
-    title: 'Landed',
-    author: 'vasrush',
+    title: 'ELUCID HOME',
+    author: 'ELUCID TEAM',
     description: 'A Gatsby.js V2 Starter based on Landed by HTML5 UP',
     menuLinks: [
       {
-        name: 'Home',
-        link: '/',
+        name: 'Demo',
+        link: '/demo',
       },
       {
-        name: 'Layouts',
+        name: 'Links',
         link: '#',
         items: [
           {
-            name: 'Left Sidebar',
-            link: '/left-sidebar',
+            name: 'GitHub',
+            link: 'https://github.com/oslabs-beta/Elucid',
           },
           {
-            name: 'Right Sidebar',
+            name: 'Something Here',
             link: '/right-sidebar',
           },
+          // {
+          //   name: 'Left Sidebar',
+          //   link: '/left-sidebar',
+          // },
           {
-            name: 'No Sidebar',
-            link: '/no-sidebar',
-          },
-          {
-            name: 'SubMenu',
+            name: 'Articles',
             link: '#',
             items: [
               {
-                name: 'Option 1',
+                name: 'Medium',
                 link: '#',
               },
               {
-                name: 'Option 2',
+                name: 'article 2',
                 link: '#',
               },
               {
-                name: 'Option 3',
+                name: 'article 3',
                 link: '#',
               },
               {
-                name: 'Option 4',
+                name: 'article 4',
                 link: '#',
               },
             ],
@@ -50,12 +50,12 @@ module.exports = {
         ],
       },
       {
-        name: 'Demo',
-        link: '/element',
+        name: 'Team',
+        link: '/team',
       },
       {
-        name: 'DONT Sign Up',
-        link: '#',
+        name: 'Install ELUCID',
+        link: 'https://www.npmjs.com/package/package',
         cl: 'button primary',
       },
     ],

@@ -4,17 +4,17 @@ import Layout from '../components/layout'
 
 import pic07 from '../assets/images/pic07.jpg'
 
-const LeftSidebar = props => (
+const Team = props => (
   <Layout>
     <Helmet>
-      <title>Right Sidebar - Landed by HTML5 UP</title>
-      <meta name="description" content="Right Sidebar Page" />
+      <title>Team - Landed by HTML5 UP</title>
+      <meta name="description" content="Team Page" />
     </Helmet>
 
     <div id="main" className="wrapper style1">
       <div className="container">
         <header className="major">
-          <h2>No Sidebar</h2>
+          <h2>TEAM ELUCID</h2>
           <p>
             Ipsum dolor feugiat aliquam tempus sed magna lorem consequat
             accumsan
@@ -75,4 +75,4 @@ const LeftSidebar = props => (
   </Layout>
 )
 
-export default LeftSidebar
+export default Team
