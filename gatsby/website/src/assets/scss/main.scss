@@ -804,37 +804,42 @@
 		height: 800px;
 	  }
 
-	  #team-quell {
-		display: block;
-		margin: auto;
-		left: 50%;
-		right: 50%;
-		width: 60%;
-		padding: 2%;
-		margin-bottom: 10%;
-	  }
+	//   #team-elucid {
+	// 	display: block;
+	// 	margin: auto;
+	// 	left: 50%;
+	// 	right: 50%;
+	// 	width: 60%;
+	// 	padding: 2%;
+	// 	margin-bottom: 10%;
+	//   }
 	  
 	  #team {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 18px;
-	  }
+		flex-basis: 33%;
+		border: 1px solid rgb(29, 158, 104);
+		padding: 1rem;
+		flex-grow: 5;
+		margin: 0 2rem 2rem 2rem;
+		box-shadow: 1px 1px 10px rgba(22, 22, 22, 0.915);
+	}
 	  
-	  .profile-pics {
-		width: 45%;
-		max-width: 400px;
+	  .profile {
+		flex-basis: 33%;
+		width: 50%;
+		max-width: 500px;
 		margin-bottom: 4%;
 	  }
 	  
 	  .profile-pics img {
 		margin-bottom: 4%;
+		height: 50%;
+		// width: 50%;
 	  }
 	  
 	  .team-member-name {
 		font-weight: bold;
-		margin-bottom: 10px;
-		letter-spacing: 5.2px;
+		margin-bottom: 12px;
+		letter-spacing: 5.5px;
 	  }
 	  
 	  .social-icons img {
