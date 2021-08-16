@@ -6,12 +6,12 @@ module.exports = {
     description: 'A Gatsby.js V2 Starter based on Landed by HTML5 UP',
     menuLinks: [
       {
-        name: 'Demo',
+        name: 'DEMO',
         link: '/demo',
         // link: '/right-sidebar',
       },
       {
-        name: 'Links',
+        name: 'LINKS',
         link: '#',
         items: [
           {
@@ -52,7 +52,7 @@ module.exports = {
         ],
       },
       {
-        name: 'Team',
+        name: 'TEAM',
         link: '/team',
       },
       {

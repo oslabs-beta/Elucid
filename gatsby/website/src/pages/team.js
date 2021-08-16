@@ -56,18 +56,17 @@ const Team = props => (
     <div id="main" className="wrapper style1">
       <div className="container">
         <header className="major">
-          <h2>TEAM ELUCID</h2>
+          <h2>Contributors</h2>
           <p>
-            Ipsum dolor feugiat aliquam tempus sed magna lorem consequat
-            accumsan
+            Meet team Elucid
           </p>
           <a href="#" className="image fit">
             <img src={pic07} alt="" />
           </a>
         </header>
 
-        <section id="content">
-          <div id="team">
+        {/* <section id="content"> */}
+          <div id="team-elucid">
         <TeamMember
           src={khayal.src}
           bio={khayal.bio}
@@ -97,7 +96,7 @@ const Team = props => (
           github={gary.github}
         />
           </div>
-        </section>
+        {/* </section> */}
       </div>
     </div>
   </Layout>

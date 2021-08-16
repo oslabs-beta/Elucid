@@ -11,18 +11,18 @@ const TeamMember = (props) => {
   const { src, bio, name, linkedin, github } = props;
 
   return (
-    <div className="profile">
+    <div className="profiles">
       <img src={src} alt="Elucid Team"></img>
       <p className="team-member-name">{name}</p>
       <p>{bio}</p>
-      <div className="social-icons">
+      <span className="social-icons">
         <a href={linkedin} target="_blank">
           <img src={Linkedin}></img>
         </a>
         <a href={github} target="_blank">
           <img src={Github}></img>
         </a>
-      </div>
+      </span>
     </div>
   );
 };

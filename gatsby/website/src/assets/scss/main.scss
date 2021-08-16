@@ -797,57 +797,59 @@
 		}
 	}
 
+/* Graphiql */
 	.graphiql {
 		margin: auto;
 		max-width: 100%;
 		margin-bottom: 2px;
 		height: 800px;
 	  }
-
-	//   #team-elucid {
-	// 	display: block;
-	// 	margin: auto;
-	// 	left: 50%;
-	// 	right: 50%;
-	// 	width: 60%;
-	// 	padding: 2%;
-	// 	margin-bottom: 10%;
+/* Team */
+	  #team-elucid {
+		max-width: 1600px;
+		margin: 0 auto;
+		display:flex;
+		flex-wrap: wrap;
+	  }
+	  
+	//   #team {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	font-size: 18px;
 	//   }
 	  
-	  #team {
-		flex-basis: 33%;
-		border: 1px solid rgb(29, 158, 104);
-		padding: 1rem;
-		flex-grow: 5;
-		margin: 0 2rem 2rem 2rem;
-		box-shadow: 1px 1px 10px rgba(22, 22, 22, 0.915);
-	}
-	  
-	  .profile {
-		flex-basis: 33%;
-		width: 50%;
-		max-width: 500px;
-		margin-bottom: 4%;
+	  .profiles {
+		flex-basis: 12%;
+
+     	// border: 1px solid rgb(29, 158, 104);
+    	padding: 0.3rem;
+    	flex-grow: 1;
+		max-width: 25%;
+		min-width: 12rem;
+    	margin: 0 1rem 2rem 2rem;
+    	// box-shadow: 1px 1px 10px rgba(22, 22, 22, 0.915);
 	  }
 	  
-	  .profile-pics img {
-		margin-bottom: 4%;
-		height: 50%;
-		// width: 50%;
+	  .profiles img {
+		border-radius: 100%;
+		display: center;
+		height: 13em;
+		margin: 1em 0 2em 1em;
+		vertical-align: middle;
+		width: 10em;
 	  }
-	  
 	  .team-member-name {
 		font-weight: bold;
-		margin-bottom: 12px;
-		letter-spacing: 5.5px;
+		margin-bottom: 10px;
+		letter-spacing: 5.2px;
 	  }
 	  
 	  .social-icons img {
-		width: 15%;
+		width: 5rem;
 		margin-top: 10px;
 		margin-left: 10px;
 	  }
-
 /* List */
 
 	ol {
@@ -1596,10 +1598,10 @@
 	#banner {
 		background-attachment: fixed;
 		background-color: _palette(accent2);
-		background-image: url('../images/banner2.gif');
+		background-image: url('../images/banner.gif');
 		background-position: center center;
 		background-size: cover;
-		box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.25);
+		box-shadow: 0 1.25em 0.5em 0 rgba(111, 13, 168, 0.25);
 		min-height: 100vh;
 		position: relative;
 		text-align: center;
@@ -1639,12 +1641,12 @@
 				vertical-align: middle;
 
 				h2 {
-					font-size: 2.5em;
+					font-size: 3.5em;
 					margin: 0;
 				}
 
 				p {
-					margin: (_size(element-margin) * 0.25) 0 0 0;
+					margin: (_size(element-margin) * .25) 0 0 0;
 					top: 0;
 				}
 			}

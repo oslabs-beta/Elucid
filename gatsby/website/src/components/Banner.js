@@ -8,9 +8,9 @@ const Banner = props => (
   <section id="banner">
     <div className="content">
       <header>
-        <h2>Welcome to Elucid</h2>
+        <h2>ELUCID </h2>
         <p>
-        GraphQL error handler for the rest of us.
+        A GraphQL error handler for modern engineering teams.
           <br />
       
         </p>
