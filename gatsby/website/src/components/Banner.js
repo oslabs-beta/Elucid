@@ -1,20 +1,22 @@
 import React from 'react'
-import pic01 from '../assets/images/pic01.jpg'
+// import pic01 from '../assets/images/pic01.jpg'
+
+import Elucid_Logo from '../assets/images/Elucid_Logo1.jpg'
 import { Link as ScrollLink } from 'react-scroll'
 
 const Banner = props => (
   <section id="banner">
     <div className="content">
       <header>
-        <h2>The future has landed</h2>
+        <h2>ELUCID </h2>
         <p>
-          And there are no hoverboards or flying cars.
+        A GraphQL error handler for modern engineering teams.
           <br />
-          Just apps. Lots of mother flipping apps.
+      
         </p>
       </header>
       <span className="image">
-        <img src={pic01} alt="intro" />
+        <img src={Elucid_Logo} alt="intro" />
       </span>
     </div>
     <ScrollLink

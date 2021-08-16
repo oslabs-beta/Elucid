@@ -1,48 +1,50 @@
 module.exports = {
   //pathPrefix: `/mygatsby`,
   siteMetadata: {
-    title: 'Landed',
-    author: 'vasrush',
+    title: 'HOME',
+    author: 'ELUCID TEAM',
     description: 'A Gatsby.js V2 Starter based on Landed by HTML5 UP',
     menuLinks: [
       {
-        name: 'Home',
-        link: '/',
+        name: 'DEMO',
+        link: '/demo',
+        // link: '/right-sidebar',
       },
       {
-        name: 'Layouts',
+        name: 'LINKS',
         link: '#',
         items: [
           {
-            name: 'Left Sidebar',
-            link: '/left-sidebar',
+            name: 'GitHub',
+            link: 'https://github.com/oslabs-beta/Elucid',
           },
+          
           {
-            name: 'Right Sidebar',
+            name: 'Optional',
             link: '/right-sidebar',
           },
+          // {
+          //   name: 'Optional',
+          //   link: '/left-sidebar',
+          // },
           {
-            name: 'No Sidebar',
-            link: '/no-sidebar',
-          },
-          {
-            name: 'SubMenu',
+            name: 'Articles',
             link: '#',
             items: [
               {
-                name: 'Option 1',
+                name: 'Medium',
+                link: 'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
+              },
+              {
+                name: 'article 2',
                 link: '#',
               },
               {
-                name: 'Option 2',
+                name: 'article 3',
                 link: '#',
               },
               {
-                name: 'Option 3',
-                link: '#',
-              },
-              {
-                name: 'Option 4',
+                name: 'article 4',
                 link: '#',
               },
             ],
@@ -50,12 +52,12 @@ module.exports = {
         ],
       },
       {
-        name: 'Demo',
-        link: '/element',
+        name: 'TEAM',
+        link: '/team',
       },
       {
-        name: 'DONT Sign Up',
-        link: '#',
+        name: 'Install ELUCID',
+        link: 'https://www.npmjs.com/package/package',
         cl: 'button primary',
       },
     ],
@@ -71,7 +73,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/Elucid_Logo.jpg', // This path is relative to the root of the site.
       },
     },
     {

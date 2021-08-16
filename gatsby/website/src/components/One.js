@@ -18,28 +18,29 @@ const One = props => (
           <div className="row">
             <div className="col-4 col-12-medium">
               <header>
-                <h2>Odio faucibus ipsum integer consequat</h2>
+                <h2>Elucid User</h2>
                 <p>
-                  Nascetur eu nibh vestibulum amet gravida nascetur praesent
+                As a web developer who has to balance my time well, 
+                I'm looking to find a lightweight and opinionated error 
+                handler for GraphQL                
                 </p>
               </header>
             </div>
             <div className="col-4 col-12-medium">
               <p>
-                Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-                Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-                nisi praesent dolor adipiscing. Integer mi sed nascetur cep
-                aliquet augue varius tempus lobortis porttitor accumsan
-                consequat adipiscing lorem dolor.
+              In the past, part of why I've resisted implementing connections
+               to GraphQL APIs is because they return error codes that are starkly 
+               different in what it takes on my end to make use of them.
+
+              
               </p>
             </div>
             <div className="col-4 col-12-medium">
               <p>
-                Morbi enim nascetur et placerat lorem sed iaculis neque ante
-                adipiscing adipiscing metus massa. Blandit orci porttitor
-                semper. Arcu phasellus tortor enim mi mi nisi praesent
-                adipiscing. Integer mi sed nascetur cep aliquet augue varius
-                tempus. Feugiat lorem ipsum dolor nullam.
+              I know that I can make my own error handling logic 
+               to address these issues, but that is a considerable cognitive load 
+                and will take time when what I want is an out-of-the-box solution 
+                that will require minimal change on my part.
               </p>
             </div>
           </div>
