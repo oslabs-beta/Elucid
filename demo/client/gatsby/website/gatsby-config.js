@@ -17,7 +17,7 @@ module.exports = {
             name: 'GitHub',
             link: 'https://github.com/oslabs-beta/Elucid',
           },
-          
+
           {
             name: 'Optional',
             link: '/right-sidebar',
@@ -28,7 +28,8 @@ module.exports = {
             items: [
               {
                 name: 'Medium',
-                link: 'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
+                link:
+                  'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
               },
               {
                 name: 'article 2',
