@@ -7,7 +7,7 @@ const Graphiql = () => (
   <div className="graphiql">
     <GraphiQL
       fetcher={async (graphQLParams) => {
-        const data = await fetch('localhost:8000/graphql', {
+        const data = await fetch('graphql', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
