@@ -8,7 +8,6 @@ module.exports = {
       {
         name: 'DEMO',
         link: '/demo',
-        // link: '/right-sidebar',
       },
       {
         name: 'LINKS',
@@ -23,10 +22,7 @@ module.exports = {
             name: 'Optional',
             link: '/right-sidebar',
           },
-          // {
-          //   name: 'Optional',
-          //   link: '/left-sidebar',
-          // },
+
           {
             name: 'Articles',
             link: '#',

@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
-const Five = props => (
+const Legal = props => (
   <section id="five" className="wrapper style2 special fade inactive">
     <Fade duration={2500}>
       <div className="container">
@@ -13,4 +13,4 @@ const Five = props => (
     </Fade>
   </section>
 )
-export default Five
+export default Legal

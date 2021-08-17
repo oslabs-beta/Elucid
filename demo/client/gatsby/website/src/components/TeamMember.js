@@ -3,9 +3,6 @@ import React from 'react';
 import Linkedin from '../assets/images/icons/ELUCID-icons-linkedin.svg';
 import Github from '../assets/images/icons/ELUCID-icons-github.svg';
 
-/* 
-  Reusable component to generate each team member
-*/
 
 const TeamMember = (props) => {
   const { src, bio, name, linkedin, github } = props;
