@@ -22,7 +22,6 @@ module.exports = {
             name: 'Optional',
             link: '/right-sidebar',
           },
-
           {
             name: 'Articles',
             link: '#',
