@@ -1,4 +1,4 @@
-const handleResultWithError = require('../src/helpers/handleResultWithError');
+const handleResultWithError = require('../../../elucid/elucidpkg/src/helpers/handleResultWithError');
 
 describe('tests for response with error and data keys', () => {
   const context = {

@@ -1,15 +1,14 @@
 {
   "name": "elucid",
   "version": "1.0.0",
-  "description": "Elucid is an open-source NPM package providing a lightweight testing tool for developers to capture more information about their GraphQL HTTP responses. Use Elucid for a better error-handling and debugging experience.",
+  "description": "Elucid is an open-source NPM package providing developers with a lightweight solution to reduce ambiguity in GraphQL responses and HTTP headers. Use Elucid for better error-handling, testing, and debugging experiences.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --verbose",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oslabs-beta/Elucid/tree/main"
+    "url": "https://github.com/oslabs-beta/Elucid/tree/main/elucid"
   },
   "keywords": [
     "graphQL",
@@ -42,15 +41,10 @@
   ],
   "homepage": "https://elucid.dev",
   "dependencies": {
-    "express-graphql": "^0.12.0",
-    "graphql": "^15.5.1"
+    "express-graphql": "^0.12.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.6",
-    "prettier-eslint": "^12.0.0"
+    "graphql": "^14.7.0 || ^15.3.0"
   }
 }
