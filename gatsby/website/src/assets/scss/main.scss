@@ -5,7 +5,8 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import url('../css/fontawesome-all.min.css');
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+/*@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 
 /*
 	Landed by HTML5 UP
@@ -757,7 +758,7 @@
 			background-image: url('../css/images/overlay.png');
 			width: 100%;
 			height: 100%;
-			z-index: 1;
+			z-index: -1;
 		}
 
 		img {
