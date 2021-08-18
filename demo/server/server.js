@@ -8,7 +8,6 @@ const elucid = require('elucid.js');
 const PORT = 3000;
 
 const app = express();
-app.use(cors());
 
 app.use(express.json());
 
