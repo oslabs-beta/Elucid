@@ -21,7 +21,7 @@ app.use('/graphql', elucid({
 
 // Fetch index page:
 app.use('/', (req, res) => {
-  return res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
+  return res.status(200).sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 // If endpoint is not found:
