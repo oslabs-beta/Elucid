@@ -2,6 +2,20 @@
 
 The Elucid Team would like to thank you for your interest in helping to maintain and improve Elucid!
 
+## If you plan on modifying the website, follow these steps beforehand
+
+There are 3 npm actions you need to run before working:
+- First go to website within demo and run `npm install`
+- Second run `npm run build` within the same directory
+- Third use `npm run develop` to launch the website
+
+Optional for server-side changes: 
+- Go to server within demo and run `npm install`
+
+## If you plan on modifying the package, follow these steps beforehand
+
+- Navigate to elucid folder and run `npm install` to download dependencies
+
 ## Reporting Bugs
 
 All code changes happen through Github Pull Requests and we actively welcome them. To submit your pull request, follow the steps below:
