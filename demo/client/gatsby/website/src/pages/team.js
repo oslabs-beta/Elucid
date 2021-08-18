@@ -13,7 +13,7 @@ const khayal = {
   name: 'Khayal Alasgarov',
   src: Khayal,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
+    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases with a focus in front-end performance optimization and server-side data transfer protocols and has a strong interest in GraphQL. Outside of coding, he is a travel and hospitality enthusiast and enjoys drawing abstract art.',
   linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
   github: 'https://github.com/Alasgaroff',
 };
@@ -60,9 +60,9 @@ const Team = props => (
           <p>
             Meet team Elucid
           </p>
-          <a href="#" className="image fit">
+          <div className="image fit">
             <img src={pic07} alt="" />
-          </a>
+          </div>
         </header>
 
         {/* <section id="content"> */}
