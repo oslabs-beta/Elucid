@@ -1,8 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
-import pic02 from '../assets/images/pic02.jpg'
-import pic06 from '../assets/images/pic06.jpg'
+import pic01 from '../assets/images/Elucid-Before-And-After-14.png'
+import pic02 from '../assets/images/Elucid-Before-And-After-23.png'
+import pic03 from '../assets/images/Elucid-Before-And-After-Too-Many.png'
 import Graphiql from '../components/Graphiql'
 
 
@@ -60,7 +61,7 @@ const Demo = props => (
             </section>*/}
             <section id="content">
               <a href="#" className="image fit">
-                <img src={pic02} alt="" />
+                <img src={pic01} alt="" />
               </a>
             </section>
           </div>
@@ -101,7 +102,7 @@ const Demo = props => (
           <div className="col-8 col-12-medium imp-medium">
             <section id="content">
             <a href="#" className="image fit">
-                <img src={pic06} alt="" />
+                <img src={pic02} alt="" />
               </a>
             </section>
           </div>
@@ -134,7 +135,7 @@ const Demo = props => (
           <div className="col-8 col-12-medium imp-medium">
             <section id="content">
               <a href="#" className="image fit">
-                <img src={pic06} alt="" />
+                <img src={pic03} alt="" />
               </a>
             </section>
           </div>

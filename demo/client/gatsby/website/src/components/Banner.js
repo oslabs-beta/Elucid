@@ -9,7 +9,7 @@ const Banner = props => (
       <header>
         <h2>ELUCID </h2>
         <p>
-        Simple GraphQL error handling in a lightweight library.
+        Improved GraphQL error messaging & handling in a lightweight library.
           <br />
       
         </p>

@@ -40,7 +40,7 @@ const gary = {
   name: 'Giovanni Iacobucci',
   src: Gary,
   bio:
-    "Giovanni crafts interactive media experiences, bringing a holistic full-stack approach to a deeply user-focused point of view. He's also a visual designer, filmmaker & editor, and writer.",
+    "Giovanni crafts interactive media experiences, bringing a holistic full-stack approach to a deeply user-focused point of view. He's also a visual designer, filmmaker and video editor, and writer.",
   linkedin: 'https://www.linkedin.com/in/gioiacobucci',
   github: 'https://github.com/garyiacobucci',
 };
