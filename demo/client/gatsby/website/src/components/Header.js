@@ -95,8 +95,7 @@ class Header extends React.Component {
       <React.Fragment>
         <div className={`navbar-menu ${this.state.mobileActiveClass}`}>
           <div id="titleBar">
-            <a
-              role="button"
+            <a role="button"
               onClick={() => this.toggleHamburger()}
               className="toggle"
               aria-label="Open mobile menu"

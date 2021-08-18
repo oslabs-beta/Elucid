@@ -24,10 +24,6 @@ const Footer = props => (
     </ul>
     <ul className="copyright">
       <li>&copy; Elucid. All rights reserved.</li>
-      <li>
-        Design: <a href="http://html5up.net">HTML5 UP</a>
-      </li>
-
     </ul>
   </footer>
 )

@@ -13,7 +13,7 @@ const khayal = {
   name: 'Khayal Alasgarov',
   src: Khayal,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
+    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases with a focus in front-end performance optimization and server-side data transfer protocols and has a strong interest in GraphQL. Outside of coding, he is a travel and hospitality enthusiast and enjoys drawing abstract art.',
   linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
   github: 'https://github.com/Alasgaroff',
 };
@@ -22,27 +22,27 @@ const vivian = {
   name: 'Vivian Wu',
   src: Vivian,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
-  linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
-  github: 'https://github.com/Alasgaroff',
+    'Vivian is a software engineer who enjoys technology and learning, specializing in JavaScript and Express, and is experienced in building full stack applications with an emphasis on code maintainability and optimization. Her interests outside of coding include eating, exploring Big Sur, going wine tasting, and training/competing in dog sports with her pup Merlin.',
+  linkedin: 'https://www.linkedin.com/in/viv-wu/',
+  github: 'https://github.com/vw-in-github',
 };
 
 const spencer = {
   name: 'Spencer Szu',
   src: Spencer,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
-  linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
-  github: 'https://github.com/Alasgaroff',
+    'Spencer likes to work out.',
+  linkedin: 'https://www.linkedin.com/in/spencer-szu',
+  github: 'https://github.com/Szuay',
 };
 
 const gary = {
-  name: 'Gary Lacobucci',
+  name: 'Giovanni Iacobucci',
   src: Gary,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
-  linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
-  github: 'https://github.com/Alasgaroff',
+    "Giovanni crafts interactive media experiences, bringing a holistic full-stack approach to a deeply user-focused point of view. He's also a visual designer, filmmaker and video editor, and writer.",
+  linkedin: 'https://www.linkedin.com/in/gioiacobucci',
+  github: 'https://github.com/garyiacobucci',
 };
 
 
@@ -60,9 +60,9 @@ const Team = props => (
           <p>
             Meet team Elucid
           </p>
-          <a href="#" className="image fit">
+          <div className="image fit">
             <img src={pic07} alt="" />
-          </a>
+          </div>
         </header>
 
         {/* <section id="content"> */}

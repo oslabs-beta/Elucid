@@ -4,7 +4,6 @@ const path = require('path');
 const schema = require('./schema/schema');
 const resolvers = require('./schema/resolvers');
 const elucid = require('elucid.js');
-const cors = require('cors');
 
 const PORT = 3000;
 
@@ -23,7 +22,7 @@ app.use('/graphql', elucid({
 
 // Fetch index page:
 app.use('/', (req, res) => {
-  return res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
+  return res.status(200).sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 // If endpoint is not found:

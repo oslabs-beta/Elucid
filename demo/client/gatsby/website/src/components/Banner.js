@@ -9,12 +9,12 @@ const Banner = props => (
       <header>
         <h2>ELUCID </h2>
         <p>
-        A GraphQL error handler for modern engineering teams.
+        Improved GraphQL error messaging & handling in a lightweight library.
           <br />
       
         </p>
       </header>
-      <span className="image">
+      <span className="image" id="home-lantern">
         <img src={Elucid_Logo} alt="intro" />
       </span>
     </div>
