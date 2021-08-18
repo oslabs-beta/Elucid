@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const schema = require('./schema/schema');
 const resolvers = require('./schema/resolvers');
-const elucid = require('elucid');
+const elucid = require('elucid.js');
 
 const PORT = 3000;
 
