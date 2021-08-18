@@ -1,4 +1,9 @@
-const { parse } = require('graphql');
+const graphqlNodeModule = 
+  process.env.NODE_ENV === 'development'
+    ? '../../../elucid/node_modules/graphql'
+    : 'graphql';
+
+const { parse } = require(graphqlNodeModule);
 
 /**
  * getQueryFieldsWithArgs populates queryFieldsWithArgs object; currently supports queries with 1 argument

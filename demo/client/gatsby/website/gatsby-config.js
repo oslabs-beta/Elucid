@@ -17,12 +17,11 @@ module.exports = {
             name: 'GitHub',
             link: 'https://github.com/oslabs-beta/Elucid',
           },
-          
+
           {
             name: 'Medium',
             link: 'https://medium.com/@gioiacobucci/introducing-elucid-a-graphql-error-handler-for-the-rest-of-us-1edd161bc38a',
           },
-
           {
             name: 'NPM',
             link: 'https://www.npmjs.com/package/package',
@@ -34,7 +33,8 @@ module.exports = {
             items: [
               {
                 name: 'Medium',
-                link: 'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
+                link:
+                  'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
               },
               {
                 name: 'article 2',
@@ -80,7 +80,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/src/assets/images/`,
         name: 'images',
       },
     },

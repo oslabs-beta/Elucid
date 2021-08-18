@@ -3,24 +3,13 @@ const express = require('express');
 const path = require('path');
 const schema = require('./schema/schema');
 const resolvers = require('./schema/resolvers');
-// const elucid = require('../elucid/src/index')
-const elucid = require('../../elucid/src/index')
-// const {graphqlHTTP} = require('express-graphql')
-
+const elucid = require('elucid');
 
 const PORT = 3000;
 
 const app = express();
 
 app.use(express.json());
-
-// Handle requests to GraphQL endpoint
-// app.use('/graphql', elucid({
-//   schema,
-//   resolvers,
-//   graphiql: true,
-//   pretty: true,
-// }));
 
 // Handle requests to GraphQL endpoint
 app.use('/graphql', elucid({

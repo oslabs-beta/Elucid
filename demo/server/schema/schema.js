@@ -1,4 +1,9 @@
-const { buildSchema } = require('graphql');
+const graphqlNodeModule = 
+  process.env.NODE_ENV === 'development'
+    ? '../../../elucid/node_modules/graphql'
+    : 'graphql';
+
+const { buildSchema } = require(graphqlNodeModule);
 
 // Construct a schema, using GraphQL schema language
 
