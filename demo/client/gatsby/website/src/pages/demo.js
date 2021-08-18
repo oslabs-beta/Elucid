@@ -65,9 +65,9 @@ const Demo = props => (
               </a>
             </section>*/}
             <section id="content">
-              <a href="#" className="image fit">
+              <div className="image fit">
                 <img src={pic01} alt="" />
-              </a>
+              </div>
             </section>
           </div>
         </div>
@@ -107,9 +107,9 @@ const Demo = props => (
           </div>
           <div className="col-8 col-12-medium imp-medium">
             <section id="content">
-            <a href="#" className="image fit">
+            <div className="image fit">
                 <img src={pic02} alt="" />
-              </a>
+              </div>
             </section>
           </div>
         </div>
@@ -141,9 +141,9 @@ const Demo = props => (
           </div>
           <div className="col-8 col-12-medium imp-medium">
             <section id="content">
-              <a href="#" className="image fit">
+              <div className="image fit">
                 <img src={pic03} alt="" />
-              </a>
+              </div>
             </section>
           </div>
         </div>
