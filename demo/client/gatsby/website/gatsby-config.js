@@ -25,32 +25,8 @@ module.exports = {
           },
           {
             name: 'NPM',
-            link: 'https://www.npmjs.com/package/package',
+            link: 'https://www.npmjs.com/package/elucid.js',
           },
-
-          /*{
-            name: 'Articles',
-            link: '#',
-            items: [
-              {
-                name: 'Medium',
-                link:
-                  'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
-              },
-              {
-                name: 'article 2',
-                link: '#',
-              },
-              {
-                name: 'article 3',
-                link: '#',
-              },
-              {
-                name: 'article 4',
-                link: '#',
-              },
-            ],
-          },*/
         ],
       },
       {
@@ -59,7 +35,7 @@ module.exports = {
       },
       {
         name: 'Install Elucid',
-        link: 'https://www.npmjs.com/package/package',
+        link: 'https://www.npmjs.com/package/elucid.js',
         cl: 'button primary',
       },
     ],
