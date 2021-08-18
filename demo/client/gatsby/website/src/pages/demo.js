@@ -56,14 +56,6 @@ const Demo = props => (
             </section>
           </div>
           <div className="col-8  imp-medium">
-            {/*<section id="content">
-               <iframe  className="juxtapose" width="100%" height="780" frameborder="0" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2629c36a-ff8b-11eb-abb7-b9a7ff2ee17c"></iframe>
-              </section>
-            <section id="content">
-              <a href="#" className="image fit">
-                <video controls autoplay loop src={pic05} width="auto" type="video/mp4" alt="" />
-              </a>
-            </section>*/}
             <section id="content">
               <div className="image fit">
                 <img src={pic01} alt="" />
@@ -74,13 +66,6 @@ const Demo = props => (
       </div>
       
       <div className="container">
-        {/*<header className="major">
-          <h2>Second Demo Example </h2>
-          <p>
-            Ipsum dolor feugiat aliquam tempus sed magna lorem consequat
-            accumsan
-          </p>
-        </header>*/}
         <div className="row gtr-150">
           <div className="col-4 col-12-medium">
             <section id="sidebar">
