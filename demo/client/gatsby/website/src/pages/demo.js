@@ -5,7 +5,11 @@ import pic01 from '../assets/images/Elucid-Before-And-After-14.png'
 import pic02 from '../assets/images/Elucid-Before-And-After-23.png'
 import pic03 from '../assets/images/Elucid-Before-And-After-Too-Many.png'
 import Graphiql from '../components/Graphiql'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
+const query1 = '{\n person { \n   name \n } \n}'
+const query2 = '{\n person (id: 1) { \n   name \n } \n}'
+const query3 = '{\n Person2: person (id:2) {\n   name\n   gender\n } \n Person1: person (id:9) {\n  name\n }\n \n person {\n   name\n }\n}'
 
 const Demo = props => (
   <Layout>
@@ -40,9 +44,10 @@ const Demo = props => (
                 <footer>
                   <ul className="actions">
                     <li>
-                      <a href="#" className="button">
-                        Copy query to clipboard
-                      </a>
+                    <CopyToClipboard text={query1}>
+                     <button className="button"> 
+                      Copy to clipboard</button>
+                     </CopyToClipboard>
                     </li>
                   </ul>
                 </footer>
@@ -89,9 +94,10 @@ const Demo = props => (
                 <footer>
                   <ul className="actions">
                     <li>
-                      <a href="#" className="button">
-                      Copy query to clipboard
-                      </a>
+                    <CopyToClipboard text={query2}>
+                     <button className="button"> 
+                      Copy to clipboard</button>
+                     </CopyToClipboard>
                     </li>
                   </ul>
                 </footer>
@@ -122,9 +128,10 @@ const Demo = props => (
                 <footer>
                   <ul className="actions">
                     <li>
-                      <a href="#" className="button">
-                      Copy query to clipboard
-                      </a>
+                    <CopyToClipboard text={query3}>
+                     <button className="button"> 
+                      Copy to clipboard</button>
+                     </CopyToClipboard>
                     </li>
                   </ul>
                 </footer>
