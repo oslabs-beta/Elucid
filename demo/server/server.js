@@ -5,7 +5,7 @@ const schema = require('./schema/schema');
 const resolvers = require('./schema/resolvers');
 const elucid = require('elucid.js');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
