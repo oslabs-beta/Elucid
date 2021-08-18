@@ -7,9 +7,8 @@ const Legal = props => (
       <div className="container">
         <header>
           <h2>This project is licensed under the ISC License.</h2>
-          <p> Elucid is an open source product.</p>
         </header>
-        <a href="#" className="button">
+        <a href="https://www.npmjs.com/package/package" className="button">
           Get Elucid
         </a>
       </div>
