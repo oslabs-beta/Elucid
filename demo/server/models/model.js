@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
-const Ted = require ("./Ted.js");
+const yourURI = require ("./yourURI.js");
 
-const myURI = Ted;
+const myURI = yourURI;
 
 // UNCOMMENT THE LINE BELOW IF USING POSTGRESQL
 const URI = process.env.PG_URI || myURI;
