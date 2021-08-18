@@ -3,11 +3,13 @@ const express = require('express');
 const path = require('path');
 const schema = require('./schema/schema');
 const resolvers = require('./schema/resolvers');
-const elucid = require('elucid');
+const elucid = require('elucid.js');
+const cors = require('cors');
 
 const PORT = 3000;
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
