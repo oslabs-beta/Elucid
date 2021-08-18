@@ -17,6 +17,7 @@
     "graphiql": "^1.4.2",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
+    "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-reveal": "^1.2.2",

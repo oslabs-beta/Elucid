@@ -1,16 +1,16 @@
 module.exports = {
   //pathPrefix: `/mygatsby`,
   siteMetadata: {
-    title: 'HOME',
+    title: 'Home',
     author: 'ELUCID TEAM',
     description: 'A Gatsby.js V2 Starter based on Landed by HTML5 UP',
     menuLinks: [
       {
-        name: 'DEMO',
+        name: 'Demo',
         link: '/demo',
       },
       {
-        name: 'LINKS',
+        name: 'Links',
         link: '#',
         items: [
           {
@@ -19,10 +19,15 @@ module.exports = {
           },
 
           {
-            name: 'Optional',
-            link: '/right-sidebar',
+            name: 'Medium',
+            link: 'https://medium.com/@gioiacobucci/introducing-elucid-a-graphql-error-handler-for-the-rest-of-us-1edd161bc38a',
           },
           {
+            name: 'NPM',
+            link: 'https://www.npmjs.com/package/package',
+          },
+
+          /*{
             name: 'Articles',
             link: '#',
             items: [
@@ -44,15 +49,15 @@ module.exports = {
                 link: '#',
               },
             ],
-          },
+          },*/
         ],
       },
       {
-        name: 'TEAM',
+        name: 'Team',
         link: '/team',
       },
       {
-        name: 'Install ELUCID',
+        name: 'Install Elucid',
         link: 'https://www.npmjs.com/package/package',
         cl: 'button primary',
       },

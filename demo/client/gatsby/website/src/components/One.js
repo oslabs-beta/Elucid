@@ -18,29 +18,20 @@ const One = props => (
           <div className="row">
             <div className="col-4 col-12-medium">
               <header>
-                <h2>Elucid User</h2>
+                {/*<h2>TK Header Line</h2>*/}
                 <p>
-                As a web developer who has to balance my time well, 
-                I'm looking to find a lightweight and opinionated error 
-                handler for GraphQL                
+                An ever-growing number of software developers have turned to GraphQL’s query language to bolster their API game.
                 </p>
               </header>
             </div>
             <div className="col-4 col-12-medium">
               <p>
-              In the past, part of why I've resisted implementing connections
-               to GraphQL APIs is because they return error codes that are starkly 
-               different in what it takes on my end to make use of them.
-
-              
+              GraphQL’s flexibility and potential for delivering precise responses with only the data a developer wants means less over- and under-fetching.
               </p>
             </div>
             <div className="col-4 col-12-medium">
               <p>
-              I know that I can make my own error handling logic 
-               to address these issues, but that is a considerable cognitive load 
-                and will take time when what I want is an out-of-the-box solution 
-                that will require minimal change on my part.
+              Yet, with all that potential comes added complications.
               </p>
             </div>
           </div>

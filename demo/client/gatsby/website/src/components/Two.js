@@ -15,22 +15,21 @@ const Two = props => (
     <Fade right big>
       <div className="content">
         <header>
-          <h2>Second Comp</h2>
-          <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+          {/*<h2>Second Comp</h2>*/}
+          <p>By replacing the static, explicit architecture of a RESTful API, GraphQL increases the conceptual complexity for a developer interacting with it.</p>
         </header>
         <p>
-          Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim
-          mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet
-          augue varius tempus lobortis porttitor lorem et accumsan consequat
-          adipiscing lorem.
+        Now, the burden is on them to make sense of the response in ways they didn’t have to worry about previously.
         </p>
-        <ul className="actions">
+        <p>In addition to lacking out-of-the-box HTTP status code manipulation, error messaging can also become vague and ambiguous. It’s not always clear when a null response field is the result of a queried-for data point simply not existing in the server, versus being the result of a malformed query or even an internal server error on the part of the GraphQL installation.
+        </p>
+        {/*<ul className="actions">
           <li>
             <a href="/" className="button">
               Learn More
             </a>
           </li>
-        </ul>
+        </ul>*/}
       </div>
     </Fade>
     <ScrollLink
