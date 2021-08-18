@@ -16,6 +16,7 @@ Optional for server-side changes:
 
 - Navigate to elucid folder and run `npm install` to download dependencies
 
+
 ## Reporting Bugs
 
 All code changes happen through Github Pull Requests and we actively welcome them. To submit your pull request, follow the steps below:
@@ -34,6 +35,12 @@ Note: Any contributions you make will be under the ISC Software License and your
 ## Issues
 
 We use GitHub issues to track bugs. Please ensure your description is clear and has sufficient instructions to be able to reproduce the issue.
+4. Ensure the test suite passes.
+5. Make sure your code lints.
+6. Issue that pull request!
+
+Note: Any contributions you make will be under the MIT Software License and your submissions are understood to be under the same that covers the project. Please reach out to the team if you have any questions.
+
 
 ## Coding Style
 
@@ -43,4 +50,3 @@ We use GitHub issues to track bugs. Please ensure your description is clear and 
 ## License
 
 By contributing, you agree that your contributions will be licensed under Elucid's ISC License.
-

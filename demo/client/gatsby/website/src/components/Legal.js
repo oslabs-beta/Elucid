@@ -6,7 +6,7 @@ const Legal = props => (
     <Fade duration={2500}>
       <div className="container">
         <header>
-          <h2>This project is licensed under the MIT License.</h2>
+          <h2>This project is licensed under the ISC License.</h2>
         </header>
         <a href="https://www.npmjs.com/package/elucid.js" className="button">
           Get Elucid
