@@ -1,4 +1,4 @@
-<p align="center"><img src="demo/client/gatsby/website/src/assets/images/Elucid_Logo1.jpg" height="250px" style="margin-top: 10px; margin-bottom: -10px;"></p>
+<p align="center"><img src="elucid/assets/Elucid_Lamp_with_Text.png" height="250px" style="margin-top: 10px; margin-bottom: -10px;"></p>
 
 [![License: MIT](https://img.shields.io/badge/license-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 ![AppVeyor](https://img.shields.io/badge/build-passing-brightgreen.svg)
