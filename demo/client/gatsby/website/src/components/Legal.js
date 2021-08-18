@@ -9,6 +9,9 @@ const Legal = props => (
           <h2>This project is licensed under the MIT License.</h2>
           <p> Elucid is an open source product.</p>
         </header>
+        <a href="#" className="button">
+          Get Elucid
+        </a>
       </div>
     </Fade>
   </section>

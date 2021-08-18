@@ -31,18 +31,18 @@ const spencer = {
   name: 'Spencer Szu',
   src: Spencer,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
-  linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
-  github: 'https://github.com/Alasgaroff',
+    'Spencer is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
+  linkedin: 'https://www.linkedin.com/in/spencer-szu',
+  github: 'https://github.com/Szuay',
 };
 
 const gary = {
-  name: 'Gary Lacobucci',
+  name: 'Giovanni Iacobucci',
   src: Gary,
   bio:
-    'Khayal is a full-stack software engineer specializing in React, Express, and relational databases, with a passion for code dependability, optimization, and test driven development. His devotion to open-source projects, and strong interest in GraphQL, makes him an ideal candidate for Elucid. Outside of coding, Khayal enjoys travelling, drawing abstract art, and learning foreign languages.',
-  linkedin: 'https://www.linkedin.com/in/khayal-alasgaroff/',
-  github: 'https://github.com/Alasgaroff',
+    "Giovanni crafts interactive media experiences, bringing a holistic full-stack approach to a deeply user-focused point of view. He's also a visual designer, filmmaker & editor, and writer.",
+  linkedin: 'https://www.linkedin.com/in/gioiacobucci',
+  github: 'https://github.com/garyiacobucci',
 };
 
 

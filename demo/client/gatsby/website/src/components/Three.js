@@ -26,7 +26,7 @@ const Three = props => (
         </p>
         <ul className="actions">
           <li>
-            <a href="/" className="button">
+            <a href="/demo" className="button">
               See Elucid in Action
             </a>
           </li>

@@ -19,8 +19,8 @@ module.exports = {
           },
           
           {
-            name: 'Optional',
-            link: '/right-sidebar',
+            name: 'Medium',
+            link: 'https://medium.com/@gioiacobucci/introducing-elucid-a-graphql-error-handler-for-the-rest-of-us-1edd161bc38a',
           },
 
           {

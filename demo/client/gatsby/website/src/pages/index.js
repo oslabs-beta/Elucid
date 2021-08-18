@@ -13,7 +13,7 @@ class Home extends React.Component {
       <Layout location="/">
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          title="Elucid - Landed"
+          title="Elucid: Added Insight for GraphQL"
           meta={[
             { name: 'description', content: 'Landed Elucid Starter' },
             { name: 'keywords', content: 'sample, something' },
