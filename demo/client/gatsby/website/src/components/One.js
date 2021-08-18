@@ -1,6 +1,5 @@
 import React from 'react'
 import pic02 from '../assets/images/pic02.jpg'
-import picTest from '../assets/images/Elucid-Before-And-After-14.png'
 import { Link as ScrollLink } from 'react-scroll'
 import Fade from 'react-reveal/Fade'
 
@@ -12,7 +11,6 @@ const One = props => (
   >
     <span className="image fit main">
       <img src={pic02} alt="" />
-      <img src={picTest} />
     </span>
     <Fade bottom big>
       <div className="content">
