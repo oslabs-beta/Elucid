@@ -1,5 +1,6 @@
 import React from 'react'
 import pic02 from '../assets/images/pic02.jpg'
+import picTest from '../assets/images/Elucid-Before-And-After-14.png'
 import { Link as ScrollLink } from 'react-scroll'
 import Fade from 'react-reveal/Fade'
 
@@ -11,28 +12,19 @@ const One = props => (
   >
     <span className="image fit main">
       <img src={pic02} alt="" />
+      <img src={picTest} />
     </span>
     <Fade bottom big>
       <div className="content">
         <div className="container">
           <div className="row">
-            <div className="col-4 col-12-medium">
+            <div className="col-7 col-12-medium">
               <header>
-                {/*<h2>TK Header Line</h2>*/}
+                <h2>Why Elucid?</h2>
                 <p>
-                An ever-growing number of software developers have turned to GraphQL’s query language to bolster their API game.
+                GraphQL is awesome, but it's not without its complications.
                 </p>
               </header>
-            </div>
-            <div className="col-4 col-12-medium">
-              <p>
-              GraphQL’s flexibility and potential for delivering precise responses with only the data a developer wants means less over- and under-fetching.
-              </p>
-            </div>
-            <div className="col-4 col-12-medium">
-              <p>
-              Yet, with all that potential comes added complications.
-              </p>
             </div>
           </div>
         </div>
