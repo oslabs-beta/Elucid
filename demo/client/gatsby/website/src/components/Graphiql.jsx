@@ -1,7 +1,6 @@
-
-import React from 'react';
-import GraphiQL from 'graphiql';
-import 'graphiql/graphiql.min.css';
+import React from 'react'
+import GraphiQL from 'graphiql'
+import 'graphiql/graphiql.min.css'
 
 const Graphiql = () => (
   <div className="graphiql">
@@ -15,11 +14,11 @@ const Graphiql = () => (
           },
           body: JSON.stringify(graphQLParams),
           credentials: 'same-origin',
-        });
-        return data.json().catch(() => data.text());
+        })
+        return data.json().catch(() => data.text())
       }}
     />
   </div>
-);
+)
 
-export default Graphiql;
+export default Graphiql

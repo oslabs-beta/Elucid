@@ -31,7 +31,7 @@ const spencer = {
   name: 'Spencer Szu',
   src: Spencer,
   bio:
-    'Spencer likes to work out.',
+    'Spencer is a full-stack software engineer specializing in React, Node/Express, and SQL relational databases with a passion for learning new concepts and technologies. His strong interest in GraphQL makes him a great contributer to Elucid. Outside of coding, Spencer enjoys weightlifting, investing, traveling and is a music enthusiast.',
   linkedin: 'https://www.linkedin.com/in/spencer-szu',
   github: 'https://github.com/Szuay',
 };

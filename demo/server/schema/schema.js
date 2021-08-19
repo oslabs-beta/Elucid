@@ -3,8 +3,8 @@
 //     ? '../../../elucid/node_modules/graphql'
 //     : 'graphql';
 
+// const { buildSchema } = require(graphqlNodeModule);
 const { buildSchema } = require('graphql');
-
 // Construct a schema, using GraphQL schema language
 
 const schema = buildSchema(`

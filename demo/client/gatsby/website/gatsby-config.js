@@ -20,11 +20,12 @@ module.exports = {
 
           {
             name: 'Medium',
-            link: 'https://medium.com/@gioiacobucci/introducing-elucid-a-graphql-error-handler-for-the-rest-of-us-1edd161bc38a',
+            link:
+              'https://medium.com/@gioiacobucci/introducing-elucid-a-graphql-error-handler-for-the-rest-of-us-1edd161bc38a',
           },
           {
             name: 'NPM',
-            link: 'https://www.npmjs.com/package/package',
+            link: 'https://www.npmjs.com/package/elucid.js',
           },
         ],
       },
@@ -34,7 +35,7 @@ module.exports = {
       },
       {
         name: 'Install Elucid',
-        link: 'https://www.npmjs.com/package/package',
+        link: 'https://www.npmjs.com/package/elucid.js',
         cl: 'button primary',
       },
     ],
@@ -56,8 +57,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/assets/images/`,
-        name: 'images',
+        path: `${__dirname}/src/`,
+        name: 'src',
       },
     },
     'gatsby-transformer-sharp',
