@@ -151,7 +151,7 @@ const Demo = props => (
 
       <div className="container">
         <header className="major">
-          <h2>Graphiql Demo </h2>
+        <a href="https://elucid-graphiql.herokuapp.com/graphql"> <h2>Graphiql Live Demo </h2> </a>
           <p>
           Test Elucid out yourself! Copy and paste sample code from the 
           examples above, or plug in your own.

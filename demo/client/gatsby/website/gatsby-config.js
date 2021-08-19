@@ -26,30 +26,6 @@ module.exports = {
             name: 'NPM',
             link: 'https://www.npmjs.com/package/package',
           },
-
-          /*{
-            name: 'Articles',
-            link: '#',
-            items: [
-              {
-                name: 'Medium',
-                link:
-                  'https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8',
-              },
-              {
-                name: 'article 2',
-                link: '#',
-              },
-              {
-                name: 'article 3',
-                link: '#',
-              },
-              {
-                name: 'article 4',
-                link: '#',
-              },
-            ],
-          },*/
         ],
       },
       {
