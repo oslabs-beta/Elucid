@@ -1,9 +1,4 @@
-const graphqlNodeModule = 
-  process.env.NODE_ENV === 'development'
-    ? '../../../elucid/node_modules/graphql'
-    : 'graphql';
-
-const { introspectionFromSchema } = require(graphqlNodeModule);
+const { introspectionFromSchema } = require('graphql');
 
 /**
  * @param {GraphQL schema} schema export of user's schema, built using buildSchema method of GraphQL

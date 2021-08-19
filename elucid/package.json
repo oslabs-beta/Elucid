@@ -1,6 +1,6 @@
 {
   "name": "elucid.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Elucid is an open-source NPM package providing developers with a lightweight solution to reduce ambiguity in GraphQL responses and HTTP headers. Use Elucid for better error-handling, testing, and debugging experiences.",
   "main": "src/index.js",
   "scripts": {
