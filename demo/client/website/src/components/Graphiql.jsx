@@ -7,7 +7,7 @@ const Graphiql = () => (
   <div className="graphiql">
     <GraphiQL
       fetcher={async (graphQLParams) => {
-        const data = await fetch('graphql', {
+        const data = await fetch('https://elucid-graphiql.herokuapp.com/graphql', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
