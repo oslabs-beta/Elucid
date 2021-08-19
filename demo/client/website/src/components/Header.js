@@ -111,7 +111,7 @@ class Header extends React.Component {
 
         <header id="header">
           <h1 id="logo">
-            <Link to="/">{siteTitle}</Link>
+            <Link to="/">{siteTitle} </Link>
           </h1>
           <div className="navbar-menu">
             <nav>
@@ -125,6 +125,7 @@ class Header extends React.Component {
                           onMouseLeave={this.leaveButton}
                           className={link.cl}
                           to={link.link}
+                          target={link.target}
                         >
                           {link.name}
                         </Link>
@@ -162,6 +163,7 @@ class Header extends React.Component {
                                     onMouseEnter={this.enterSubButton}
                                     onMouseLeave={this.leaveSubButton}
                                     to={sublink.link}
+                                    target={sublink.target}
                                   >
                                     {sublink.name}
                                   </Link>
@@ -181,6 +183,7 @@ class Header extends React.Component {
                                     }
                                     onMouseEnter={this.enterSubMenu}
                                     onMouseLeave={this.leaveSubMenu}
+                                    
                                   >
                                     {sublink.items.map(nestedsublink => (
                                       <li
@@ -215,7 +218,7 @@ class Header extends React.Component {
                                   display: `block`,
                                 }}
                               >
-                                <Link to={sublink.link}>{sublink.name}</Link>
+                                <Link target='_blank' rel="noopener noreferrer" to={sublink.link} >{sublink.name}</Link>
                               </li>
                             )
                           )}
@@ -224,7 +227,7 @@ class Header extends React.Component {
                     </React.Fragment>
                   ) : (
                     <li key={link.name}>
-                      <Link className={link.cl} to={link.link}>
+                      <Link target='_blank' rel="noopener noreferrer" className={link.cl} to={link.link} >
                         {link.name}
                       </Link>
                     </li>

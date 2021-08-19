@@ -2,10 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
-import One from '../components/One'
-import Two from '../components/Two'
-import Three from '../components/Three'
+import One from '../components/Home1'
+import Two from '../components/Home2'
+import Three from '../components/Home3'
 import Legal from '../components/Legal'
+
 
 class Home extends React.Component {
   render() {
