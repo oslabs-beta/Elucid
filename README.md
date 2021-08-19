@@ -1,9 +1,9 @@
-<p align="center"><img src="demo/client/gatsby/website/src/assets/images/Elucid_Logo1.jpg" height="250px" style="margin-top: 10px; margin-bottom: -10px;"></p>
+<p align="center"><img src="./elucid/assets/Elucid_Lamp_with_Text.png" height="250px" style="margin-top: 10px; margin-bottom: -10px;"></p>
 
 [![License: MIT](https://img.shields.io/badge/license-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 ![AppVeyor](https://img.shields.io/badge/build-passing-brightgreen.svg)
-![AppVeyor](https://img.shields.io/badge/version-1.0.0-blue.svg)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/oslabs-beta/Quell/issues)
+![AppVeyor](https://img.shields.io/badge/version-1.0.1-blue.svg)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](./CONTRIBUTING.md)
 
 # Elucid
 
@@ -33,12 +33,33 @@ In its current form, Elucid extends express-graphql's server middleware, so you'
 
 Here's an example of a typical server.js setup running Elucid: 
 
-<img src="./elucid/assets/server-setup.jpg" height="350px"></img>
+```js
+const express = require('express');
+const path = require('path');
+const schema = require('./schema/schema');
+const resolvers = require('./schema/resolvers');
+const elucid = require('elucid.js');
+
+const PORT = 3000;
+
+const app = express();
+
+app.use(express.json());
+
+// Handle requests to GraphQL endpoint
+app.use('/graphql', elucid({
+  schema,
+  resolvers,
+  graphiql: true,
+  pretty: true,
+}));
+```
+
 
 - Notice that after installation of its npm package, the Elucid function must be imported into your server file as a required module, 'elucid.js'.
 - Then, the elucid function is passed into the Express 'use' method as its second argument.
 - This is very similar to how express-graphql's 'graphqlHTTP' middleware function is used. In fact, the configuration object that elucid() takes as an argument passes its values through to an invocation of graphqlHTTP. That includes the keys 'schema' and 'resolvers' (note that these evaluate to your imported GraphQL schema and resolver files), as well as the config booleans 'graphiql' and 'pretty'.
-- At runtime, elucid() will kick off a sequence of events under the hood. GraphqlHTTP will process the request. If it doesn't catch an error on its own, Elucid's functionality will kick in to do its additional post-processing, which may include modifying the default response status code and returning a more detailed, useful context message in the 'elucid' property of the response object.
+- At runtime, elucid() will kick off a sequence of events under the hood. GraphqlHTTP will process the request. If it doesn't catch an error on its own, Elucid's functionality will kick in to do its additional post-processing, which may include modifying the default response status code and returning a more detailed, useful context message in the 'elucid' property of the response object's 'extensions' property.
 
 ### Contribute to Elucid
 

@@ -14,11 +14,11 @@ const Three = props => (
     </span>
     <Fade left big>
       <div className="content">
-        <header>
-          <p>We wanted to build an extension of graphql.js that wouldn’t require opting into an entire network layer ecosystem between client and server.</p>
+      <header>
+          <p>Elucid is an extension of graphql.js that improves GraphQL's error messaging and status code handling.</p>
         </header>
         <p>
-        We just wanted something lightweight, direct, and easy to get off the ground. Something that felt less like an entire framework for developers to adopt, and more like a plugin to make their lives just a little bit easier and more illustrative when it comes to communicating with a GraphQL server.
+        It's lightweight and easy to get off the ground. It's not an entire framework for developers to adopt, just something to make their lives a little easier.
         </p>
         <p>
         We believe Elucid is the most essential, minimalist error handling library for Javascript implementations of GraphQL available today. We hope you’ll give it a try and find that it helps illuminate the path forward in your own projects.
