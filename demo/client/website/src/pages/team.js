@@ -64,8 +64,6 @@ const Team = props => (
             <img src={pic07} alt="" />
           </div>
         </header>
-
-        {/* <section id="content"> */}
           <div id="team-elucid">
         <TeamMember
           src={khayal.src}
@@ -96,7 +94,6 @@ const Team = props => (
           github={gary.github}
         />
           </div>
-        {/* </section> */}
       </div>
     </div>
   </Layout>

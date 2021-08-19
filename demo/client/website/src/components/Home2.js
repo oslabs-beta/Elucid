@@ -14,8 +14,7 @@ const Two = props => (
     </span>
     <Fade right big>
       <div className="content">
-        <header>
-          {/*<h2>Second Comp</h2>*/}
+      <header>
           <p>Because GraphQL replaces the explicit architecture of a RESTful API, it increases the conceptual complexity for a developer interacting with it.</p>
         </header>
         <p>
@@ -23,13 +22,6 @@ const Two = props => (
         </p>
         <p>It’s not always clear when a null response field is the result of a queried-for data point simply not existing in the server, versus being the result of a malformed query or even an internal server error on the part of the GraphQL installation.
         </p>
-        {/*<ul className="actions">
-          <li>
-            <a href="/" className="button">
-              Learn More
-            </a>
-          </li>
-        </ul>*/}
       </div>
     </Fade>
     <ScrollLink

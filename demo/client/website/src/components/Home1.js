@@ -17,7 +17,7 @@ const One = props => (
         <div className="container">
           <div className="row">
             <div className="col-7 col-12-medium">
-              <header>
+            <header>
                 <h2>Why Elucid?</h2>
                 <p>
                 GraphQL is awesome, but it's not without its complications.

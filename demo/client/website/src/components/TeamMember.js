@@ -11,12 +11,12 @@ const TeamMember = (props) => {
       <p>{bio}</p>
       <ul className="icons">
         <li>
-          <a href={linkedin} className="icon brands alt fa-linkedin-in" >
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="icon brands alt fa-linkedin-in" >
             <span className="label">LinkedIn</span>
           </a>
         </li>
         <li>
-          <a href={github} className="icon brands alt fa-github" >
+          <a href={github} target="_blank" rel="noopener noreferrer" className="icon brands alt fa-github" >
             <span className="label">GitHub</span>
           </a>
         </li>

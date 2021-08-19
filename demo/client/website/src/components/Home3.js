@@ -14,8 +14,7 @@ const Three = props => (
     </span>
     <Fade left big>
       <div className="content">
-        <header>
-          {/*<h2>Interdum felis blandit praesent sed augue</h2>*/}
+      <header>
           <p>Elucid is an extension of graphql.js that improves GraphQL's error messaging and status code handling.</p>
         </header>
         <p>
