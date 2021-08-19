@@ -16,16 +16,19 @@ module.exports = {
           {
             name: 'GitHub',
             link: 'https://github.com/oslabs-beta/Elucid',
+            target:'_blank',
 
           },
           {
             name: 'Medium',
             link: 'https://medium.com/@gioiacobucci/introducing-elucid-a-graphql-error-handler-for-the-rest-of-us-1edd161bc38a',
+            target:'_blank',
 
           },
           {
             name: 'NPM',
             link: 'https://www.npmjs.com/package/elucid.js',
+            target:'_blank',
 
           },
         ],

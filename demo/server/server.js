@@ -9,11 +9,15 @@ const cors = require('cors')
 const PORT = process.env.PORT || 5000;
 
 const app = express();
-app.use(cors());
+
+const corsOption = {
+  options: 'https://elucid.dev'
+}
+
 app.use(express.json());
 
 // Handle requests to GraphQL endpoint
-app.use('/graphql', elucid({
+app.use('/graphql', cors(corsOption), elucid({
   schema,
   resolvers,
   graphiql: true,
